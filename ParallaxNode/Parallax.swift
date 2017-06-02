@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Parallax : SKSpriteNode {
+public class Parallax : SKSpriteNode {
     //MARK: Attributes
     private var backGroundWidth : CGFloat!
     private var repetitionsCount : Int!
@@ -26,7 +26,7 @@ class Parallax : SKSpriteNode {
      - xPosition: Posição x do parallax
      - yPosition: Posição y do parallax
      */
-    func setup(backGroundWidth: CGFloat, repetitionsCount: Int, layerCount: Int, xPosition: CGFloat, yPosition: CGFloat) {
+    public func setup(backGroundWidth: CGFloat, repetitionsCount: Int, layerCount: Int, xPosition: CGFloat, yPosition: CGFloat) {
         self.backGroundWidth = backGroundWidth
         self.repetitionsCount = repetitionsCount
         self.layerCount = layerCount
@@ -41,7 +41,7 @@ class Parallax : SKSpriteNode {
      - namesOfImages: Array com os nomes das texturas.
      - namesOfBackground: Array com os nomes dos backgrounds.
      */
-    func addLayers(namesOfImages: [String], namesOfBackground: [String]) {
+    public func addLayers(namesOfImages: [String], namesOfBackground: [String]) {
         
         if namesOfImages.count != layerCount || namesOfBackground.count != layerCount {
             fatalError("The size of one of the arrays does not match the layer count!")
@@ -85,7 +85,7 @@ class Parallax : SKSpriteNode {
      - cameraNode: Camera necessária para realização dos cálculos de posição.
      - layersNames: Array com os nomes dos layers.
      */
-    func moveBackGround(moveX : CGFloat, cameraNode: SKCameraNode, layersNames: [String]) {
+    public func moveBackGround(moveX : CGFloat, cameraNode: SKCameraNode, layersNames: [String]) {
         
         if layersNames.count != layerCount {
             fatalError("The size of the array does not match the layer count!")
